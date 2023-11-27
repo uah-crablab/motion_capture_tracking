@@ -54,7 +54,7 @@ int main(int argc, char **argv)
   rclcpp::init(argc, argv);
   auto node = rclcpp::Node::make_shared("motion_capture_tracking_node");
   node->declare_parameter<std::string>("type", "vicon");
-  node->declare_parameter<std::string>("hostname", "localhost");
+  node->declare_parameter<std::string>("hostname", "192.168.10.1");
   node->declare_parameter<std::string>("topics.poses.qos.mode", "none");
   node->declare_parameter<double>("topics.poses.qos.deadline", 100.0);
   node->declare_parameter<std::string>("logfilepath", "");
